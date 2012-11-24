@@ -318,7 +318,12 @@ bool getCut( IloNumArray& vals, IloNumVarArray& vars, CutMode cutmode, int set,
 
 
 ILOUSERCUTCALLBACK3( CtCallback, IloNumVarArray, vars, int**, graph, int, num_cuts ) {
+	
 	cout << current_deep << endl;
+	
+	if( current_deep > max_deep )
+		return;
+	
 	
 	//if(0){
 	IloNumArray vals(getEnv());
