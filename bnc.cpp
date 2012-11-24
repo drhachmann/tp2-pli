@@ -1,6 +1,15 @@
 
 #include "bnc.h"
 
+
+int bestIncumbent = -1;
+int op1=0;
+int op2=0;
+
+int current_deep;
+int max_deep = 50;
+
+
 BNC::BNC( char* mo, int tl, int ph, char* in ){
 	mod = mo;
 	time_limit = tl;
@@ -64,53 +73,11 @@ BNC::~BNC(){
 	
 }
 
-int bestIncumbent = -1;
-int op1=0;
-int op2=0;
-
-ILOMIPINFOCALLBACK3(loggingCallback,
-                    IloNumVarArray, vars,
-                    IloNum,         lastLog, 
-                    IloNum,         lastIncumbent)
-{
-   int newIncumbent = 0;
-   int nodes = getNnodes();
-	 if(hasIncumbent() )
-		 bestIncumbent = getIncumbentObjValue();
-	 if(false){
-   if ( hasIncumbent()                                  && 
-        fabs(lastIncumbent - getIncumbentObjValue())
-              > 1e-5*(1.0 + fabs(getIncumbentObjValue())) ) {
-      lastIncumbent = getIncumbentObjValue();
-      newIncumbent = 1;
-   }
-     
-   if ( nodes >= lastLog + 100  ||  newIncumbent ) {  
-
-      if ( !newIncumbent )  lastLog = nodes;
-      getEnv().out() << "Nodes = " << nodes
-                     << '(' << getNremainingNodes() << ')'
-                     << "  Best objective = " << getBestObjValue();
-
-      if ( hasIncumbent() ) {
-         getEnv().out() << "  Incumbent objective = " << getIncumbentObjValue()
-                        << endl;
-      }
-      else {
-         getEnv().out() << endl;
-      }
-
-   }
-   if ( newIncumbent ) {
-      IloNumArray val(vars.getEnv());
-      getIncumbentValues(val, vars);
-      val[0] = getIncumbentValue(vars[0]);
-      getEnv().out() << "New incumbent variable values: " << endl
-                     << val << endl;
-      val.end();
-   }
-	}
+//set the current_deep variable to the deep of current node
+ILONODECALLBACK1( MySelect, int*, deep ){
+	*deep = getDepth(0);
 }
+
 
 ILOHEURISTICCALLBACK3(Rounddown, IloNumVarArray, vars, int**, graph, vector<vector<int> >, adj) {
 	//if(0){
@@ -351,6 +318,7 @@ bool getCut( IloNumArray& vals, IloNumVarArray& vars, CutMode cutmode, int set,
 
 
 ILOUSERCUTCALLBACK3( CtCallback, IloNumVarArray, vars, int**, graph, int, num_cuts ) {
+	cout << current_deep << endl;
 	
 	//if(0){
 	IloNumArray vals(getEnv());
@@ -677,6 +645,8 @@ void BNC::configureCPLEX(){
 
 	//status = CPXsetintparam (env, CPX_PARAM_DATACHECK, CPX_ON);
 	
+	//actives the node callback MySelect
+	cplex->use( MySelect( *env, &current_deep ) );
 }
 
 void BNC::printResult(){

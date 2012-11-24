@@ -2,12 +2,12 @@ SYSTEM     = x86_sles10_4.1
 LIBFORMAT  = static_pic
 
 #Diego
-CPLEXDIR      = /home/drhachmann/cplex/cplex
-CONCERTDIR    = /home/drhachmann/cplex/concert
+#CPLEXDIR      = /home/drhachmann/cplex/cplex
+#CONCERTDIR    = /home/drhachmann/cplex/concert
 
 #mude os dois caminhos abaixo para os caminhos onde o CPLEX foi instalado no seu computador
-#CPLEXDIR      = /opt/ibm/ILOG/CPLEX_Studio124/cplex
-#CONCERTDIR    = /opt/ibm/ILOG/CPLEX_Studio124/concert
+CPLEXDIR      = /opt/ibm/ILOG/CPLEX_Studio124/cplex
+CONCERTDIR    = /opt/ibm/ILOG/CPLEX_Studio124/concert
 
 CCC = g++ -O0
 
