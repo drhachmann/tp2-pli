@@ -1,0 +1,29 @@
+DIMENSOES 100 495
+N cortes 0
+Found feasible solution after 0.00 sec.  Objective = 0.0000
+Clique table members: 1090.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: deterministic, using up to 24 threads.
+Root relaxation solution time =    0.01 sec.
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+*     0+    0                            0.0000                    209     --- 
+*     0+    0                           43.0000                    209     --- 
+*     0+    0                           49.0000                    209     --- 
+      0     0      100.0000   200       49.0000      100.0000      209  104.08%
+*     0+    0                           51.0000      100.0000      209   96.08%
+      0     2      100.0000   200       51.0000      100.0000      209   96.08%                        0             0
+Elapsed real time =   0.28 sec. (tree size =  0.01 MB, solutions = 4)
+*   791+  783                           54.0000       98.5000    13515   82.41%
+*  2438+ 2160                           57.0000       94.5000    33326   65.79%
+   3606  2830       61.0000   114       57.0000       94.5000    41970   65.79%            id78 D   3708   3684     53
+  22712 20010       75.5000   144       57.0000       83.0000   188638   45.61%            id37 D  23270  23246     15
+  43251 38151       63.5000   117       57.0000       80.5000   343433   41.23%           id195 D  44168  44144     54
+  64732 56987       65.5000   122       57.0000       79.0000   499604   38.60%           id102 U  64696  64648     33
+  85662 75176       63.0000   112       57.0000       78.0000   656728   36.84%            id15 U  85812  85740     37
+ 105383 92213       70.0000   132       57.0000       77.5000   804512   35.96%            id57 D 105624 105600     29
+ 126465 110340       68.0000   125       57.0000       76.5000   959253   34.21%            id57 D 126481 126457     26
+ 147713 128493       69.0000   128       57.0000       76.0000  1115978   33.33%             id4 D 147842 147818     25

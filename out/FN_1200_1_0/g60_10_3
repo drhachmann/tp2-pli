@@ -1,0 +1,47 @@
+DIMENSOES 60 177
+N cortes 0
+Found feasible solution after 0.00 sec.  Objective = 0.0000
+Clique table members: 414.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time =    0.01 sec.
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+*     0+    0                            0.0000                    131     --- 
+*     0+    0                           33.0000                    131     --- 
+*     0+    0                           36.0000                    131     --- 
+      0     0       60.0000   120       36.0000       60.0000      131   66.67%
+*     0+    0                           37.0000       60.0000      131   62.16%
+      0     2       60.0000   120       37.0000       60.0000      131   62.16%                        0             0
+Elapsed real time =   0.15 sec. (tree size =  0.00 MB, solutions = 4)
+*    10+   10                           39.0000       59.0000      369   51.28%
+*   110+   91                           40.0000       58.0000     1418   45.00%
+    932   759       44.0000    78       40.0000       52.0000     7300   30.00%            id43 D    932    931     19
+   2124  1658       44.0000    74       40.0000       50.0000    15338   25.00%            id79 D   2124   2123     17
+*  3037  2080      integral     0       41.0000       49.0000    21527   19.51%            id43 D   3037   3036     22
+   4262  2847       44.0000    76       41.0000       48.5000    29779   18.29%            id66 D   4262   4261     13
+   5489  3561       45.5000    78       41.0000       47.5000    38066   15.85%            id52 D   5489   5488     16
+   6705  4197        cutoff             41.0000       47.0000    46393   14.63%            id46 D   6705   6704     14
+   7912  4780       42.5000    71       41.0000       46.5000    55320   13.41%            id17 U   7912   7910     18
+   9147  5325        cutoff             41.0000       46.5000    64239   13.41%           id104 D   9147   9146     18
+  10367  5809        cutoff             41.0000       46.0000    72963   12.20%            id43 U  10367  10365     23
+  15300  7217       42.5000    77       41.0000       45.0000   109058    9.76%            id52 U  15300   3428     10
+Elapsed real time =  10.22 sec. (tree size =  2.35 MB, solutions = 7)
+* 19525  4646      integral     0       42.0000       44.0000   142296    4.76%            id86 D  19525  19524     22
+
+Root node processing (before b&c):
+  Real time             =    0.07
+Sequential b&c:
+  Real time             =   15.55
+                          -------
+Total (root+branch&cut) =   15.61 sec.
+Solution status = Optimal
+Solution value  = 42
+GAP             = 0%
+Heuristica 1 : 5408
+Heuristica 2 : 9808
+A = [ 0 1 1 0 1 0 1 1 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 1 1 1 0 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 1 1 1 1 0 ]
+B = [ 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 1 1 0 0 1 1 0 0 1 0 0 0 1 1 1 0 0 0 1 1 1 0 0 0 0 0 0 0 0 1 1 1 0 1 0 1 0 0 0 1 0 0 0 0 0 ]

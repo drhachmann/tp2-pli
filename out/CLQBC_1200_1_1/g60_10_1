@@ -1,0 +1,39 @@
+LINE 15
+DIMENSOES 60 177
+N cortes 1
+Found feasible solution after 0.00 sec.  Objective = 0.0000
+Clique table members: 328.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time =    0.00 sec.
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+*     0+    0                            0.0000                    175     --- 
+*     0+    0                           38.0000                    175     --- 
+      0     0       50.0000    98       38.0000       50.0000      175   31.58%
+*     0+    0                           39.0000       50.0000      175   28.21%
+      0     2       50.0000    98       39.0000       50.0000      175   28.21%                        0             0
+Elapsed real time =   0.08 sec. (tree size =  0.00 MB, solutions = 3)
+*    10+   10                           41.0000       50.0000      459   21.95%
+*   110+   76                           42.0000       48.4286     2627   15.31%
+    403   226       44.1667    94       42.0000       46.0000     8289    9.52%            id92 D    403    402     14
+*   594   173      integral     0       43.0000       45.0000    11160    4.65%           id117 D    594    591     11
+
+User cuts applied:  28
+
+Root node processing (before b&c):
+  Real time             =    0.04
+Sequential b&c:
+  Real time             =    0.90
+                          -------
+Total (root+branch&cut) =    0.94 sec.
+Solution status = Optimal
+Solution value  = 43
+GAP             = 0%
+Heuristica 1 : 382
+Heuristica 2 : 163
+A = [ 0 1 0 1 0 1 0 1 0 1 1 0 1 1 0 0 1 1 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 1 0 1 1 0 0 1 0 0 0 0 1 0 0 0 ]
+B = [ 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 1 0 0 0 0 0 1 1 0 1 1 0 0 0 0 1 0 0 1 1 0 1 1 1 1 0 0 1 1 ]

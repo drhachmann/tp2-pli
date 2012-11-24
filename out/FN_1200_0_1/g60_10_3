@@ -1,0 +1,44 @@
+LINE 15
+DIMENSOES 60 177
+N cortes 1
+Found feasible solution after 0.00 sec.  Objective = 0.0000
+Clique table members: 414.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: deterministic, using up to 2 threads.
+Root relaxation solution time =    0.00 sec.
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+*     0+    0                            0.0000                    131     --- 
+*     0+    0                           33.0000                    131     --- 
+      0     0       60.0000   120       33.0000       60.0000      131   81.82%
+*     0+    0                           35.0000       60.0000      131   71.43%
+*     0+    0                           37.0000       60.0000      131   62.16%
+      0     2       60.0000   120       37.0000       60.0000      131   62.16%                        0             0
+Elapsed real time =   0.13 sec. (tree size =  0.01 MB, solutions = 4)
+*    66+   60                           39.0000       58.5000     1059   50.00%
+*    88    71      integral     0       40.0000       58.5000     1257   46.25%             id5 D     78     76     25
+*    90+   67                           41.0000       58.5000     1264   42.68%
+   3209  2147       45.0000    82       41.0000       48.5000    24473   18.29%            id85 D   3140   3138     23
+   6488  3563        cutoff             41.0000       46.5000    51115   13.41%             id7 D   6420   6418     18
+   9605  4140        cutoff             41.0000       45.0000    78902    9.76%            id37 D   9747   9745     15
+* 11021  4091      integral     0       42.0000       45.0000    92082    7.14%            id75 D  11159  11157     20
+  13830  1282        cutoff             42.0000       43.5000   114583    3.57%             id7 U  13670   6913     26
+
+Root node processing (before b&c):
+  Real time             =    0.05
+Parallel b&c, 2 threads:
+  Real time             =    3.47
+  Sync time (average)   =    0.00
+  Wait time (average)   =    0.00
+                          -------
+Total (root+branch&cut) =    3.52 sec.
+Solution status = Optimal
+Solution value  = 42
+GAP             = 0%
+Heuristica 1 : 0
+Heuristica 2 : 0
+A = [ 0 1 0 0 1 0 1 1 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 1 1 1 0 0 1 1 1 0 1 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 1 1 1 0 ]
+B = [ 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 1 1 0 0 1 1 0 0 1 0 1 0 1 1 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 1 0 1 0 1 0 0 0 1 0 0 0 0 0 ]

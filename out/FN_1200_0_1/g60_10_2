@@ -1,0 +1,39 @@
+LINE 15
+DIMENSOES 60 177
+N cortes 1
+Found feasible solution after 0.00 sec.  Objective = 0.0000
+Clique table members: 414.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: deterministic, using up to 2 threads.
+Root relaxation solution time =    0.00 sec.
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+*     0+    0                            0.0000                    133     --- 
+*     0+    0                           39.0000                    133     --- 
+      0     0       60.0000   120       39.0000       60.0000      133   53.85%
+      0     2       60.0000   120       39.0000       60.0000      133   53.85%                        0             0
+Elapsed real time =   0.07 sec. (tree size =  0.01 MB, solutions = 2)
+*    51    45      integral     0       40.0000       57.0000      974   42.50%            id69 D     53     51     18
+*   248+  203                           42.0000       54.5000     2481   29.76%
+   3025  1847       44.0000    74       42.0000       48.5000    23913   15.48%            id46 D   3050   3048     19
+*  5744  2822      integral     0       43.0000       46.5000    45446    8.14%            id19 D   5792   5790     15
+   8540  1008       44.0000    75       43.0000       44.5000    72439    3.49%           id106 D   8600   3774     21
+
+Root node processing (before b&c):
+  Real time             =    0.04
+Parallel b&c, 2 threads:
+  Real time             =    2.27
+  Sync time (average)   =    0.00
+  Wait time (average)   =    0.00
+                          -------
+Total (root+branch&cut) =    2.31 sec.
+Solution status = Optimal
+Solution value  = 43
+GAP             = 0%
+Heuristica 1 : 0
+Heuristica 2 : 0
+A = [ 1 1 1 0 1 1 1 0 0 1 1 0 0 0 0 0 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 0 1 0 0 0 0 0 0 1 1 0 1 1 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 ]
+B = [ 0 0 0 0 0 0 0 1 0 0 0 0 1 0 1 1 0 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 0 0 0 0 1 1 1 0 0 1 0 0 1 1 0 1 0 0 1 0 1 1 1 1 0 0 0 0 ]

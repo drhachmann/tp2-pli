@@ -1,0 +1,41 @@
+LINE 15
+DIMENSOES 60 177
+N cortes 1
+Found feasible solution after 0.00 sec.  Objective = 0.0000
+Clique table members: 414.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: deterministic, using up to 2 threads.
+Root relaxation solution time =    0.00 sec.
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+*     0+    0                            0.0000                    133     --- 
+*     0+    0                           38.0000                    133     --- 
+      0     0       60.0000   120       38.0000       60.0000      133   57.89%
+*     0+    0                           39.0000       60.0000      133   53.85%
+*     0+    0                           40.0000       60.0000      133   50.00%
+      0     2       60.0000   120       40.0000       60.0000      133   50.00%                        0             0
+Elapsed real time =   0.11 sec. (tree size =  0.01 MB, solutions = 4)
+*    56+   47                           41.0000       58.0000      986   41.46%
+*   366+  298                           42.0000       53.5000     3304   27.38%
+*   378   286      integral     0       43.0000       53.5000     3381   24.42%            id99 U    373    369     21
+   3561  1447        cutoff             43.0000       47.0000    28649    9.30%            id85 U   3614   3610     20
+   6357    64        cutoff             43.0000       44.5000    56581    3.49%            id68 U   6406    488     27
+
+Root node processing (before b&c):
+  Real time             =    0.05
+Parallel b&c, 2 threads:
+  Real time             =    1.59
+  Sync time (average)   =    0.00
+  Wait time (average)   =    0.00
+                          -------
+Total (root+branch&cut) =    1.64 sec.
+Solution status = Optimal
+Solution value  = 43
+GAP             = 0%
+Heuristica 1 : 0
+Heuristica 2 : 0
+A = [ 0 0 1 1 0 1 0 1 1 1 1 0 1 1 0 0 0 1 0 0 1 0 0 1 0 0 0 0 0 0 1 0 0 1 1 1 1 0 0 0 0 1 0 0 0 0 0 1 1 0 1 0 0 0 0 0 1 0 0 0 ]
+B = [ 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 1 0 0 1 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 1 1 1 0 0 0 0 1 1 0 0 1 0 0 1 1 1 0 0 1 1 1 ]

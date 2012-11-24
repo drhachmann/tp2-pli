@@ -1,0 +1,65 @@
+LINE 15
+DIMENSOES 60 531
+N cortes 1
+Found feasible solution after 0.00 sec.  Objective = 0.0000
+Clique table members: 514.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time =    0.02 sec.
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+*     0+    0                            0.0000                    381     --- 
+*     0+    0                           16.0000                    381     --- 
+*     0+    0                           19.0000                    381     --- 
+      0     0       34.2185   115       19.0000       34.2185      381   80.10%
+*     0+    0                           20.0000       34.2185      381   71.09%
+      0     0       34.1481   116       20.0000       User: 2      421   70.74%
+      0     0       33.9501   117       20.0000       User: 4      458   69.75%
+      0     0       33.8435   116       20.0000       User: 4      497   69.22%
+*     0+    0                           22.0000       33.8435      497   53.83%
+      0     0       33.4407   114       22.0000       User: 4      549   52.00%
+      0     0       33.2837   114       22.0000       User: 4      579   51.29%
+      0     0       33.2536   115       22.0000       User: 2      592   51.15%
+      0     0       33.0264   115       22.0000       User: 2      628   50.12%
+      0     0       32.8939   115       22.0000       User: 4      655   49.52%
+      0     0       32.8594   114       22.0000       User: 4      675   49.36%
+      0     0       32.8335   113       22.0000       User: 2      692   49.24%
+      0     0       32.8288   114       22.0000       User: 2      703   49.22%
+      0     0       32.7632   112       22.0000       User: 2      739   48.92%
+      0     0       32.7030   113       22.0000       User: 4      760   48.65%
+      0     0       32.6657   114       22.0000       User: 4      784   48.48%
+      0     0       32.5754   112       22.0000       User: 4      808   48.07%
+      0     0       32.5735   112       22.0000       User: 4      814   48.06%
+      0     0       32.3990   112       22.0000       User: 4      843   47.27%
+      0     2       32.3990   112       22.0000       32.3987      843   47.27%                        0             0
+Elapsed real time =   0.32 sec. (tree size =  0.00 MB, solutions = 5)
+     22    24       24.1000    63       22.0000       31.7804     3145   44.46%           id117 U     22     20     18
+    103    89       23.4872    78       22.0000       29.8232     8206   35.56%            id45 D    103    102     20
+    191   151       27.0828    89       22.0000       28.7255    13061   30.57%            id57 U    191     29      4
+    307   235       26.3684    86       22.0000       28.0408    18688   27.46%            id57 U    307     87      5
+    404   302       23.3776    62       22.0000       27.4925    24074   24.97%           id105 U    404    403     18
+*   412   217      integral     0       23.0000       27.4861    24442   19.50%            id64 D    412    411     11
+    508   260       25.4636    72       23.0000       26.7773    29459   16.42%            id55 U    508    192      6
+    604   297       24.5729    78       23.0000       26.4407    34443   14.96%           id101 U    604     63     17
+    698   307        cutoff             23.0000       26.0448    39256   13.24%            id32 U    698    696     10
+   1126   199        cutoff             23.0000       24.6857    58867    7.33%            id36 U   1126    268      8
+Elapsed real time =   5.42 sec. (tree size =  0.26 MB, solutions = 6)
+
+User cuts applied:  964
+
+Root node processing (before b&c):
+  Real time             =    0.20
+Sequential b&c:
+  Real time             =    5.69
+                          -------
+Total (root+branch&cut) =    5.90 sec.
+Solution status = Optimal
+Solution value  = 23
+GAP             = 0%
+Heuristica 1 : 566
+Heuristica 2 : 195
+A = [ 0 1 0 0 1 0 1 0 0 1 1 0 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ]
+B = [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 ]
