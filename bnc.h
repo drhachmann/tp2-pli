@@ -21,6 +21,8 @@ class BNC{
 		BNC( char*, int, int, char* );
 		~BNC();
 		int n_cortes;
+		int max_deep;
+		
 		void solve();
 	private:
 		

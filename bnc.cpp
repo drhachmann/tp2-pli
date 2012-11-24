@@ -7,7 +7,7 @@ int op1=0;
 int op2=0;
 
 int current_deep;
-int max_deep = 50;
+//int max_deep = 1000000;
 
 
 BNC::BNC( char* mo, int tl, int ph, char* in ){
@@ -75,9 +75,16 @@ BNC::~BNC(){
 
 //set the current_deep variable to the deep of current node
 ILONODECALLBACK1( MySelect, int*, deep ){
+	//getEnv().getDepth();
 	*deep = getDepth(0);
+	
+// 	IloInt remainingNodes = getNremainingNodes();
+// 	for (IloInt i = 0; i < remainingNodes; i++) {
+// 		int depth = getDepth(i);
+// 		cout << depth << " ";
+// 	}
+// 	cout << endl;
 }
-
 
 ILOHEURISTICCALLBACK3(Rounddown, IloNumVarArray, vars, int**, graph, vector<vector<int> >, adj) {
 	//if(0){
@@ -317,15 +324,13 @@ bool getCut( IloNumArray& vals, IloNumVarArray& vars, CutMode cutmode, int set,
 }
 
 
-ILOUSERCUTCALLBACK3( CtCallback, IloNumVarArray, vars, int**, graph, int, num_cuts ) {
+ILOUSERCUTCALLBACK4( CtCallback, IloNumVarArray, vars, int**, graph, int, num_cuts, int, max_deep ) {
 	
-	cout << current_deep << endl;
-	
-	if( current_deep > max_deep )
+	if( current_deep > max_deep ){
+		//cout << "aa " << current_deep << endl;
 		return;
+	}
 	
-	
-	//if(0){
 	IloNumArray vals(getEnv());
 	getValues(vals, vars);
 	IntegerFeasibilityArray feas( getEnv() );
@@ -586,7 +591,7 @@ void BNC::solveCLQBC(){
 	
 	buildModelCF();
 	
-	cplex->use( CtCallback(*env, *variables, graph, n_cortes ) );
+	cplex->use( CtCallback(*env, *variables, graph, n_cortes, max_deep ) );
 	try{
 		if( !cplex->solve() ){
 			env->error() << "Failed to optimize LP" << endl;
@@ -644,9 +649,8 @@ void BNC::configureCPLEX(){
 
 	//Set the upper limit on the number of cutting plane passes CPLEX performs when solving the root node of a MIP model
 	printf("N cortes %d\n", n_cortes);
-//	if(n_cortes>0){
-//		cplex->setParam(IloCplex::CutPass, n_cortes);
-//	}
+	printf("MaxDeep %d\n", max_deep);
+	
 
 	//status = CPXsetintparam (env, CPX_PARAM_DATACHECK, CPX_ON);
 	
